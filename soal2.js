@@ -35,43 +35,56 @@ let productBin = {
     "message": "success"
   }
 
-// // jalan tapi tanpa filter productCode
-// let jumlah = 0;
-// productBin.data.forEach(element => { 
-//     jumlah += element.quantity ;
-// });
-// console.log("Total quantity untuk productCode FBR00040101 adalah: ", jumlah);
+  // totalan
+count = Array.from(
+        productBin.data.reduce(
+            (m, { productCode ,quantity }) => m.set(productCode, (m.get(productCode) || 0) + quantity),
+            new Map
+        ),
+        ([productCode, count]) => ({ [productCode]: count })
+    );
+console.log("Total quantity untuk productCode FBR00040101 adalah")
+console.log(count);
 
 
 
 
-//dengan filter tapi jalan 3x
-let jumlah = 0;
-productBin.data.forEach(element => { 
-  jumlah += element.quantity });
-productBin.data.map(element => {
-   if(element.productCode == 'FBR00040101'){
-    console.log("Total quantity untuk productCode FBR00040101 adalah: ", jumlah);
-   }
-   else {
-    console.log("Tidak ada hasil");
-   }
-});
 
-// let jumlah = 0;
-// productBin.data.forEach(element => { 
-//    element?.productCode === 'FBR0004010as' 
-//    jumlah += element.quantity 
+
+
+
+
+
+//   let jumlah = 0;
+//   productBin.data.forEach(element => { 
+//     jumlah += element.quantity });
+//   productBin.data.map(element => {
+//      if(element.productCode == 'FBR00040101'){
+//       console.log("Total quantity untuk productCode FBR00040101 adalah: ", jumlah);
+//      }
+//      else {
+//       console.log("Tidak ada hasil");
+//      }
 //   });
-//   console.log("Total quantity untuk productCode FBR00040101 adalah: ", jumlah)
 
 
 
-// dengan filter tapi gamau ngefilter
-// let jumlah = 0;
-// productBin.data.forEach(element => { 
-//     jumlah += element.quantity;
-//     Object.keys(element.productCode==="FBR00040101x") ;
-// });
-// console.log("Total quantity untuk productCode FBR00040101 adalah: ", jumlah);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
