@@ -1,6 +1,9 @@
 # LatihanJavascript
 Sanbercode Bootcamp Latihan Javascript dan Git
 
+Tugas Pekanan 3 - Javascript Github
+
+Nama: Widya Ariyani - Kelas Karyawan Quality Assurance Automation Batch 41
 
 Installation:
 
